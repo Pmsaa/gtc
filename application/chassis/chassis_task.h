@@ -3,8 +3,11 @@
 
 #include "sbus.h"
 #include "drv_io.h"
-#include "motor.h"
+#include "board.h"
 #include "sw_ft.h"
+#include "caterpillar.h"
+
+#define FOOT_PEDALS_SPEED	0.35	
 
 struct chassis
 {
@@ -14,5 +17,6 @@ struct chassis
 
 
 void chassis_init(void);
+void chassis_set_speed(void);
 
 #endif // __CHASSIS_TASK_H

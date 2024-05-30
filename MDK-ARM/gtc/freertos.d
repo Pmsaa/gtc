@@ -1,7 +1,7 @@
 .\gtc\freertos.o: ../Core/Src/freertos.c
 .\gtc\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-.\gtc\freertos.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-.\gtc\freertos.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\gtc\freertos.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\gtc\freertos.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\gtc\freertos.o: ../Core/Inc/FreeRTOSConfig.h
 .\gtc\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 .\gtc\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
@@ -45,4 +45,4 @@
 .\gtc\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 .\gtc\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 .\gtc\freertos.o: ../Core/Inc/usart.h
-.\gtc\freertos.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\gtc\freertos.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

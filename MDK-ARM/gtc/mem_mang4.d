@@ -1,12 +1,12 @@
 .\gtc\mem_mang4.o: ..\components\support\mem_mang4.c
 .\gtc\mem_mang4.o: ..\components\support\mem_mang.h
-.\gtc\mem_mang4.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\gtc\mem_mang4.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\gtc\mem_mang4.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\gtc\mem_mang4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\gtc\mem_mang4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\gtc\mem_mang4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\gtc\mem_mang4.o: ..\components\support\sys.h
-.\gtc\mem_mang4.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
-.\gtc\mem_mang4.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\gtc\mem_mang4.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\gtc\mem_mang4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\gtc\mem_mang4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\gtc\mem_mang4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\gtc\mem_mang4.o: ..\components\support\errno.h
 .\gtc\mem_mang4.o: ..\components\support\linux_list.h
 .\gtc\mem_mang4.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
@@ -22,7 +22,7 @@
 .\gtc\mem_mang4.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 .\gtc\mem_mang4.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 .\gtc\mem_mang4.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-.\gtc\mem_mang4.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\gtc\mem_mang4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\gtc\mem_mang4.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 .\gtc\mem_mang4.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 .\gtc\mem_mang4.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h

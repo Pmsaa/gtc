@@ -6,10 +6,9 @@
 #include "drv_uart.h"
 #include "drv_t12.h"
 #include "sbus.h"
-
 #include "can.h"
 #include "drv_can.h"
-
+#include "motor.h"
 #include "drv_io.h"
 
 int32_t t12_rx_data_by_uart(uint8_t *buff, uint16_t len);

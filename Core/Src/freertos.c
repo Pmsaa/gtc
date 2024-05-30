@@ -51,7 +51,7 @@
 osThreadId_t systemServiceHandle;
 const osThreadAttr_t systemService_attributes = {
   .name = "systemService",
-  .stack_size = 512 * 4,
+  .stack_size = 256 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
 
@@ -135,7 +135,7 @@ void systemLedTask(void * pvParameters)
 	for(;;)
 	{
 		HAL_GPIO_TogglePin(led_GPIO_Port, led_Pin);
-		vTaskDelay(500);
+		osDelay(500);
 	}
 }
 /* USER CODE END Application */

@@ -1,12 +1,12 @@
 .\gtc\os_timer.o: ..\components\soft_timer\os_timer.c
 .\gtc\os_timer.o: ..\components\soft_timer\os_timer.h
 .\gtc\os_timer.o: ../components/support/sys.h
-.\gtc\os_timer.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\gtc\os_timer.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\gtc\os_timer.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
-.\gtc\os_timer.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-.\gtc\os_timer.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\gtc\os_timer.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\gtc\os_timer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\gtc\os_timer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\gtc\os_timer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\gtc\os_timer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\gtc\os_timer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\gtc\os_timer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\gtc\os_timer.o: ../components/support/errno.h
 .\gtc\os_timer.o: ../components/support/linux_list.h
 .\gtc\os_timer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
@@ -22,7 +22,7 @@
 .\gtc\os_timer.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 .\gtc\os_timer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 .\gtc\os_timer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-.\gtc\os_timer.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\gtc\os_timer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\gtc\os_timer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 .\gtc\os_timer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 .\gtc\os_timer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
@@ -52,3 +52,6 @@
 .\gtc\os_timer.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 .\gtc\os_timer.o: ..\components\soft_timer\soft_timer.h
 .\gtc\os_timer.o: ..\components\soft_timer\period.h
+.\gtc\os_timer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+.\gtc\os_timer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+.\gtc\os_timer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

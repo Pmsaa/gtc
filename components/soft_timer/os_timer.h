@@ -21,6 +21,7 @@
 #include "sys.h"
 #include "soft_timer.h"
 #include "period.h"
+#include "timers.h"
 
 typedef int32_t (*soft_timer_callback)(void *argc);
 

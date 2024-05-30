@@ -1,8 +1,8 @@
 .\gtc\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
-.\gtc\list.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\gtc\list.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\gtc\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-.\gtc\list.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-.\gtc\list.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\gtc\list.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\gtc\list.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\gtc\list.o: ../Core/Inc/FreeRTOSConfig.h
 .\gtc\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 .\gtc\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

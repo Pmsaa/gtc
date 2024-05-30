@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "board.h": "c",
+        "sys.h": "c",
+        "sbus.h": "c",
+        "timers.h": "c",
+        "soft_timer.h": "c",
+        "chassis_task.h": "c",
+        "limits": "c"
+    }
+}

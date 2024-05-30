@@ -1,7 +1,7 @@
 .\gtc\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c
 .\gtc\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-.\gtc\port.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-.\gtc\port.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\gtc\port.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\gtc\port.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\gtc\port.o: ../Core/Inc/FreeRTOSConfig.h
 .\gtc\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 .\gtc\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

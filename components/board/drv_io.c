@@ -23,16 +23,16 @@ void drv_io_init(void)
 	HAL_GPIO_Init(SW3_PORT, &GPIO_InitStruct);
 
 	/* -------------------- FT ----------------------------- */
-	GPIO_InitStruct.Pin = FT1_PIN;
-	GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-	HAL_GPIO_Init(FT1_PORT, &GPIO_InitStruct);
-	
-	GPIO_InitStruct.Pin = FT2_PIN;
-	HAL_GPIO_Init(FT2_PORT, &GPIO_InitStruct);
+//	GPIO_InitStruct.Pin = FT1_PIN;
+//	GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+//	HAL_GPIO_Init(FT1_PORT, &GPIO_InitStruct);
+//	
+//	GPIO_InitStruct.Pin = FT2_PIN;
+//	HAL_GPIO_Init(FT2_PORT, &GPIO_InitStruct);
 
-	GPIO_InitStruct.Pin = FT3_PIN;
-	HAL_GPIO_Init(FT3_PORT, &GPIO_InitStruct);
-	
-	GPIO_InitStruct.Pin = FT4_PIN;
-	HAL_GPIO_Init(FT4_PORT, &GPIO_InitStruct);
+//	GPIO_InitStruct.Pin = FT3_PIN;
+//	HAL_GPIO_Init(FT3_PORT, &GPIO_InitStruct);
+//	
+//	GPIO_InitStruct.Pin = FT4_PIN;
+//	HAL_GPIO_Init(FT4_PORT, &GPIO_InitStruct);
 }

@@ -7,14 +7,14 @@
 .\gtc\main.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 .\gtc\main.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h
 .\gtc\main.o: ../Drivers/CMSIS/Include/core_cm3.h
-.\gtc\main.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\gtc\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\gtc\main.o: ../Drivers/CMSIS/Include/cmsis_version.h
 .\gtc\main.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 .\gtc\main.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 .\gtc\main.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 .\gtc\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 .\gtc\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-.\gtc\main.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\gtc\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\gtc\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 .\gtc\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 .\gtc\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
@@ -47,6 +47,6 @@
 .\gtc\main.o: ../Core/Inc/spi.h
 .\gtc\main.o: ../Core/Inc/tim.h
 .\gtc\main.o: ../Core/Inc/usart.h
-.\gtc\main.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\gtc\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\gtc\main.o: ../Core/Inc/usb.h
 .\gtc\main.o: ../Core/Inc/gpio.h

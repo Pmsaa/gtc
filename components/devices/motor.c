@@ -58,10 +58,16 @@ void motor_fill_data_output(void)
 	motor_device_t motor_dev;
 	uint8_t node_id;
 	
-	memset(&motor_msg, 0, sizeof(motor_msg));
+	memset(&motor_msg[0], 0, sizeof(motor_msg[0]));
 	
-	information = get_device_information();
+	motor_msg[0].id = 0x600;
+	motor_msg[0].len = 8;
 	
+	memset(&motor_msg[0].data, 0, sizeof(motor_msg[0].data));
+	motor_msg[0].data[0] = 0x2b;
+	motor_msg[0].data[1] = 0x01;
+	
+	information = get_device_information();	
 	for(node = information->object_list.next;
 		node != &(information->object_list);
 		node = node->next)
@@ -71,21 +77,17 @@ void motor_fill_data_output(void)
 		if(motor_dev->parent.type == DEVICE_MOTOR)
 		{
 			node_id = motor_dev->node_id;
-			motor_msg[node_id - 1].id = 0x600+node_id;
-			
-			memset(&motor_msg[node_id - 1].data, 0, sizeof(motor_msg[node_id - 1].data));
-			motor_msg[node_id - 1].data[0] = 0x2b;
-			motor_msg[node_id - 1].data[4] = motor_dev->speed_rate;
-			
-			motor_msg[node_id - 1].len = 8;
-			
-			if(motor_dev->can_send_flag == 1)
+			if(node_id == 1)
 			{
-				motor_can_send(motor_msg[node_id-1]);
-				motor_dev->can_send_flag = 0;
+				motor_msg[0].data[5] = motor_dev->speed_rate;
+			}else if(node_id == 2)
+			{
+				motor_msg[0].data[4] = motor_dev->speed_rate;
 			}
 		}
 	}
+	
+	motor_can_send(motor_msg[0]);
 }
 
 int32_t motor_canstd_send(struct can_msg msg) 
@@ -93,3 +95,19 @@ int32_t motor_canstd_send(struct can_msg msg)
 	can_std_transmit(msg.id, msg.data, msg.len);
 	return E_OK;
 }
+
+void motor_set_control_mode(void)
+{
+	// Speed closed-loop, CAN communication control
+	struct can_msg msg;
+	msg.id = 0x601;
+	msg.len = 8;
+	memset(&msg.data, 0, sizeof(msg.data));
+	msg.data[0] = 0x2b;
+	msg.data[1] = 0x03;
+	msg.data[2] = 0x01;
+	msg.data[4] = 0x03;
+	msg.data[5] = 0x01;
+	motor_can_send(msg);
+}
+

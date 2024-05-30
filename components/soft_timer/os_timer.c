@@ -24,7 +24,7 @@ osThreadId timer_task_t;
 osThreadId_t timer_task_t;
 const osThreadAttr_t timer_task_attr = {
 	.name = "TIMER_1MS",
-	.stack_size = 1024,
+	.stack_size = 512,
 	.priority = osPriorityNormal,
 };
 
@@ -62,6 +62,8 @@ int32_t soft_timer_register(soft_timer_callback callback_t, void *argc, uint32_t
 /* FreeRTOS soft timer thread */
 void timer_task(void *argument)
 {
+    TickType_t xLastWakeTime;
+    xLastWakeTime = xTaskGetTickCount();
     while (1)
     {
         TimerISR_Hook();
@@ -78,7 +80,6 @@ void timer_task(void *argument)
                 }
             }
         }
-
-        osDelayUntil(1);
+        vTaskDelayUntil(&xLastWakeTime, 1);
     }
 }

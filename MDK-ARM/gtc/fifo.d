@@ -1,12 +1,12 @@
 .\gtc\fifo.o: ..\components\support\fifo.c
 .\gtc\fifo.o: ..\components\support\fifo.h
-.\gtc\fifo.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\gtc\fifo.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\gtc\fifo.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\gtc\fifo.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\gtc\fifo.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\gtc\fifo.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\gtc\fifo.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\gtc\fifo.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\gtc\fifo.o: ..\components\support\sys.h
-.\gtc\fifo.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
-.\gtc\fifo.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\gtc\fifo.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\gtc\fifo.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\gtc\fifo.o: ..\components\support\errno.h
 .\gtc\fifo.o: ..\components\support\linux_list.h
 .\gtc\fifo.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
@@ -22,7 +22,7 @@
 .\gtc\fifo.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 .\gtc\fifo.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 .\gtc\fifo.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-.\gtc\fifo.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\gtc\fifo.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\gtc\fifo.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 .\gtc\fifo.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 .\gtc\fifo.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h

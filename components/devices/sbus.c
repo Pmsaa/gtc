@@ -60,7 +60,6 @@ int32_t rc_device_get_state(rc_device_t rc_dev, uint16_t state)
     {
         if ((rc_dev->state & state) == state)
         {
-            rc_dev->state &= (~(state & 0x00FF));
             exit_critical();
             return E_OK;
         }
@@ -83,6 +82,7 @@ rc_info_t rc_device_get_info(rc_device_t rc_dev)
     return &(rc_dev->rc_info);
 }
 
+
 static void get_t12_data(rc_device_t rc_dev, uint8_t *buff)
 {
 	if(buff[0] != 0x0f)
@@ -93,9 +93,13 @@ static void get_t12_data(rc_device_t rc_dev, uint8_t *buff)
     rc_info_t rc = &rc_dev->rc_info;
 
     rc->x2  = ((int16_t)buff[ 1] >> 0 | ((int16_t)buff[ 2] << 8 )) & 0x07FF;
+	rc->x2 -= 1002;
     rc->y2  = ((int16_t)buff[ 2] >> 3 | ((int16_t)buff[ 3] << 5 )) & 0x07FF;
+	rc->y2 -= 1002;
     rc->y1  = ((int16_t)buff[ 3] >> 6 | ((int16_t)buff[ 4] << 2 )  | (int16_t)buff[ 5] << 10 ) & 0x07FF;
+	rc->y1 -= 1002;
     rc->x1  = ((int16_t)buff[ 5] >> 1 | ((int16_t)buff[ 6] << 7 )) & 0x07FF;
+	rc->x1 -= 1002;
 
     rc->_e5 = ((int16_t)buff[ 6] >> 4 | ((int16_t)buff[ 7] << 4 )) & 0x07FF;
     rc->g6  = ((int16_t)buff[ 7] >> 7 | ((int16_t)buff[ 8] << 1 )  | (int16_t)buff[9] <<  9 ) & 0x07FF;
@@ -107,11 +111,6 @@ static void get_t12_data(rc_device_t rc_dev, uint8_t *buff)
 	rc->c11 = ((int16_t)buff[14] >> 6 | ((int16_t)buff[15] << 2 )  | (int16_t)buff[16] << 10 ) & 0x07FF;
 	rc->d12 = ((int16_t)buff[16] >> 1 | ((int16_t)buff[17] << 7 )) & 0x07FF;
 //    memset(pstRcCmd, 0, sizeof(struct rc_cmd));
-	
-	rc_dev->chx1 = rc_dev->rc_info.x1 - RC_DEV_MIN;
-	rc_dev->chx2 = rc_dev->rc_info.x2 - RC_DEV_MIN;
-	rc_dev->chy1 = rc_dev->rc_info.y1 - RC_DEV_MIN;
-	rc_dev->chy2 = rc_dev->rc_info.y2 - RC_DEV_MIN;
 }
 
 static void get_t12_state(rc_device_t rc_dev)
@@ -120,77 +119,77 @@ static void get_t12_state(rc_device_t rc_dev)
 	if(rc_dev->rc_info._e5 < SMALL_BOUNDARY)
 	{
 		rc_dev->state |= RC_E5_UP;
-		rc_dev->state &= RC_E5_DOWN;
-		rc_dev->state &= RC_E5_MID;
+		rc_dev->state &= ~RC_E5_DOWN;
+		rc_dev->state &= ~RC_E5_MID;
 	}
 	else if(rc_dev->rc_info._e5 > BIG_BOUNDARY)
 	{
-		rc_dev->state &= RC_E5_UP;
-		rc_dev->state &= RC_E5_MID;
+		rc_dev->state &= ~RC_E5_UP;
+		rc_dev->state &= ~RC_E5_MID;
 		rc_dev->state |= RC_E5_DOWN;
 	}
 	else 
 	{
-		rc_dev->state &= RC_E5_UP;
+		rc_dev->state &= ~RC_E5_UP;
 		rc_dev->state |= RC_E5_MID;
-		rc_dev->state &= RC_E5_DOWN;
+		rc_dev->state &= ~RC_E5_DOWN;
 	}
 	// ----------------------------------------------
 	if(rc_dev->rc_info.g6 < SMALL_BOUNDARY)
 	{
 		rc_dev->state |= RC_G6_LEFT;
-		rc_dev->state &= RC_G6_MID;
-		rc_dev->state &= RC_G6_RIG;
+		rc_dev->state &= ~RC_G6_MID;
+		rc_dev->state &= ~RC_G6_RIG;
 	}
 	else if(rc_dev->rc_info.g6 > BIG_BOUNDARY)
 	{
-		rc_dev->state &= RC_G6_LEFT;
-		rc_dev->state &= RC_G6_MID;
+		rc_dev->state &= ~RC_G6_LEFT;
+		rc_dev->state &= ~RC_G6_MID;
 		rc_dev->state |= RC_G6_RIG;
 	}
 	else
 	{
-		rc_dev->state &= RC_G6_LEFT;
+		rc_dev->state &= ~RC_G6_LEFT;
 		rc_dev->state |= RC_G6_MID;
-		rc_dev->state &= RC_G6_RIG;
+		rc_dev->state &= ~RC_G6_RIG;
 	}
 	// -----------------------------------------------
 	if(rc_dev->rc_info._h7 < SMALL_BOUNDARY)
 	{
-		rc_dev->state &= RC_H7_LEFT;
-		rc_dev->state &= RC_H7_MID;
+		rc_dev->state &= ~RC_H7_LEFT;
+		rc_dev->state &= ~RC_H7_MID;
 		rc_dev->state |= RC_H7_RIG;
 	}
 	else if(rc_dev->rc_info._h7 > BIG_BOUNDARY)
 	{
 		rc_dev->state |= RC_H7_LEFT;
-		rc_dev->state &= RC_H7_MID;
-		rc_dev->state &= RC_H7_RIG;
+		rc_dev->state &= ~RC_H7_MID;
+		rc_dev->state &= ~RC_H7_RIG;
 	}
 	else
 	{
-		rc_dev->state &= RC_H7_LEFT;
+		rc_dev->state &= ~RC_H7_LEFT;
 		rc_dev->state |= RC_H7_MID;
-		rc_dev->state &= RC_H7_RIG;
+		rc_dev->state &= ~RC_H7_RIG;
 	}
 	// --------------------------------------------
 	if(rc_dev->rc_info._f8 < SMALL_BOUNDARY)
 	{
 		rc_dev->state |= RC_F8_UP;
-		rc_dev->state &= RC_F8_MID;
-		rc_dev->state &= RC_F8_DOWN;
+		rc_dev->state &= ~RC_F8_MID;
+		rc_dev->state &= ~RC_F8_DOWN;
 	}
 	if(rc_dev->rc_info._f8 > BIG_BOUNDARY)
 	{
-		rc_dev->state &= RC_F8_UP;
-		rc_dev->state &= RC_F8_MID;
+		rc_dev->state &= ~RC_F8_UP;
+		rc_dev->state &= ~RC_F8_MID;
 		rc_dev->state |= RC_F8_DOWN;
 	}
 	else
 	{
-		rc_dev->state &= RC_F8_UP;
+		rc_dev->state &= ~RC_F8_UP;
 		rc_dev->state |= RC_F8_MID;
-		rc_dev->state &= RC_F8_DOWN;
+		rc_dev->state &= ~RC_F8_DOWN;
 	}
 	return;
 }

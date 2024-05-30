@@ -2,12 +2,12 @@
 .\gtc\log.o: ..\components\log\log.h
 .\gtc\log.o: ..\components\log\log_config.h
 .\gtc\log.o: ../components/support/sys.h
-.\gtc\log.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\gtc\log.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\gtc\log.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
-.\gtc\log.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-.\gtc\log.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\gtc\log.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\gtc\log.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\gtc\log.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\gtc\log.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\gtc\log.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\gtc\log.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\gtc\log.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\gtc\log.o: ../components/support/errno.h
 .\gtc\log.o: ../components/support/linux_list.h
 .\gtc\log.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
@@ -23,7 +23,7 @@
 .\gtc\log.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 .\gtc\log.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 .\gtc\log.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-.\gtc\log.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\gtc\log.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\gtc\log.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 .\gtc\log.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 .\gtc\log.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h

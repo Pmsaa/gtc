@@ -1,7 +1,7 @@
 .\gtc\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
 .\gtc\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-.\gtc\croutine.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-.\gtc\croutine.o: F:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\gtc\croutine.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\gtc\croutine.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\gtc\croutine.o: ../Core/Inc/FreeRTOSConfig.h
 .\gtc\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 .\gtc\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

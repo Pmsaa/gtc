@@ -1,2 +1,10 @@
 # gtc
-Gantry_tracked_chassis
+
+##### 1.硬件设计
+
+主控：STM32F103RET6
+
+CAN：500K
+
+##### 2.软件设计
+

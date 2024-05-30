@@ -71,18 +71,12 @@ struct rc_info
 	
 };
 
-
-
 struct rc_device
 {
     struct device parent;
     struct rc_info rc_info;
     struct rc_info last_rc_info;
     uint16_t state;
-	uint16_t chx1;
-	uint16_t chx2;
-	uint16_t chy1;
-	uint16_t chy2;
     void (*get_data)(rc_device_t, uint8_t *);
     void (*get_state)(rc_device_t);
 };

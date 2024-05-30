@@ -82,4 +82,6 @@ int32_t motor_set_can_send_flag(motor_device_t motor_dev, uint8_t flag);
 void motor_fill_data_output(void);
 int32_t motor_canstd_send(struct can_msg msg);
 
+void motor_set_control_mode(void);
+
 #endif // __MOTOR_H
